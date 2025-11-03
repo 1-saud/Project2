@@ -1,0 +1,11 @@
+public class Route {
+    String start;
+    String end;
+    double price;
+
+    Route(String start, String end, double price) {
+        this.start = start;
+        this.end = end;
+        this.price = price;
+    }
+}
