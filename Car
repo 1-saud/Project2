@@ -1,0 +1,11 @@
+public class Car {
+    String code;
+    Route route;
+    int maxCap;
+
+    Car(String code, Route route, int maxCap) {
+        this.code = code;
+        this.route = route;
+        this.maxCap = maxCap;
+    }
+}
