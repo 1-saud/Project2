@@ -1,0 +1,30 @@
+
+class SubPassenger extends Passenger {
+    SubPassenger(String name, int id) {
+        super(name, id);
+    }
+
+    @Override
+    public void reserveCar(Car c) {
+        if (c.maxCap == 0) {
+            System.out.println("capacity zero");
+        }
+        car = c;
+        c.maxCap = c.maxCap - 1;
+        double price = c.route.price;
+        tripCost = price * 0.5;
+    }
+
+    @Override
+    public void showInfo() {
+        System.out.println("name: " + name);
+        System.out.println("id: " + id);
+        if (car != null) {
+            System.out.println("car code: " + car.code);
+            System.out.println("route price: " + car.route.price);
+            System.out.println("trip cost: " + tripCost);
+        } else {
+            System.out.println("no car");
+        }
+    }
+}
