@@ -1,0 +1,15 @@
+public abstract class Passenger {
+    String name;
+    int id;
+    Car car;
+    double tripCost;
+
+    Passenger(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    public abstract void reserveCar(Car c);
+
+    public abstract void showInfo();
+}
